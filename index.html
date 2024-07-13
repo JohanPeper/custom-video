@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom video</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <main>
+        <div class="name">Video</div>
+        <div class="player">
+            <video class="player--video" src="./assets/video/video.mp4"> </video>
+            <img src="./assets/img/play-btn.svg" alt="Play"  class="play-btn">
+        </div>
+        <div class="player--controls">
+            <div class="play-icon"></div>
+            <input type="range" min="0" max="1000" value="0" step="1" class="progress">
+            <button data-skip="-10" class="player__button">« 10s</button>
+            <button data-skip="10" class="player__button">10s »</button>
+            <div class="volume-icon"></div>
+            <input type="range" min="0" max="100" value="100" step="1" class="volume">
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <a href="https://github.com/JohanPeper" title="github">&copy;2024 JohanPeper</a>
+            <div class="rss"><a href="https://rs.school/js/"></a></div>
+        </div>
+    </footer>
+</body>
+
+</html>
