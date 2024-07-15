@@ -42,8 +42,7 @@ function handleProgress() {
     let proValPrc = progressValue/10; // Progress value in percent
 
     //Different color of the progress bar before and after the slider
-    root.style.setProperty('--currentVideoTime', proValPrc + '%' );
-    progress.style.cssText =  'background: linear-gradient(to right,rgb(20, 1, 36) 0%,rgb(20, 1, 36) var(--currentVideoTime), rgb(109, 107, 107) 1%,  rgb(43, 41, 41) 100%);'
+   progress.style.cssText =  `background: linear-gradient(to right,rgb(20, 1, 36) 0%,rgb(20, 1, 36) ${proValPrc}%, rgb(109, 107, 107) 1%,  rgb(43, 41, 41) 100%);`
 
     if (video.ended) {
         progress.value = '0';
@@ -69,8 +68,7 @@ function volumeChange(e) {
     video.volume = curVol;
     volumeIcon.style.cssText = 'background : no-repeat url(./assets/img/volume.svg);'     
 
-    root.style.setProperty('--currentVolume', curVolPrc + '%' );
-    volumeSlider.style.cssText =  'background: linear-gradient(to right, rgb(20, 1, 36) 0%,rgb(20, 1, 36) var(--currentVolume), rgb(109, 107, 107) 1%,  rgb(43, 41, 41) 100%);'
+    volumeSlider.style.cssText =  `background: linear-gradient(to right, rgb(20, 1, 36) 0%,rgb(20, 1, 36) ${curVolPrc}%, rgb(109, 107, 107) 1%,  rgb(43, 41, 41) 100%); margin-right: 0px;`
 }
 
 function muteIcon () { 
@@ -89,6 +87,7 @@ function handleSkip() {
 }
 
 playBtn.addEventListener('click',showControls);
+video.addEventListener('click',showControls);
 video.addEventListener("click", togglePlay);
 playIcon.addEventListener("click", togglePlay);
 playBtn.addEventListener('click',togglePlay);

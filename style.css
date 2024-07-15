@@ -128,6 +128,7 @@ input[type=range]::-webkit-slider-thumb {
 
 .volume{
     background: linear-gradient(to right,rgb(20, 1, 36) 0%,rgb(20, 1, 36) var(--currentVolume), rgb(109, 107, 107) 2%,  rgb(43, 41, 41) 100%);
+    margin-right: 0px;
 }
 
 .footer-container {
